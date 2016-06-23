@@ -1,4 +1,4 @@
-# Copyright (C) 2014 The CyanogenMod Project
+# Copyright (C) 2016 The ZephyrOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,13 +14,13 @@
 
 $(call inherit-product, device/yu/tomato/full_tomato.mk)
 
-# Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+# Inherit some common ZOS stuff.
+$(call inherit-product, vendor/zos/config/common.mk)
 
 # Must define platform variant before including any common things
 TARGET_BOARD_PLATFORM_VARIANT := msm8939
 
-PRODUCT_NAME := cm_tomato
+PRODUCT_NAME := zos_tomato
 BOARD_VENDOR := yu
 PRODUCT_DEVICE := tomato
 
@@ -36,3 +36,6 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     BUILD_FINGERPRINT=YU/YUREKA/YUREKA:5.1.1/LMY49J/YOG4PAS8A4:user/release-keys \
     PRIVATE_BUILD_DESC="YUREKA-user 5.1.1 LMY49J YOG4PAS8A4 release-keys"
 endif
+
+# ZephyrOS Maintainer
+PRODUCT_BUILD_PROP_OVERRIDES += DEVICE_MAINTAINERS="Darshan M. (darshan1205)"
