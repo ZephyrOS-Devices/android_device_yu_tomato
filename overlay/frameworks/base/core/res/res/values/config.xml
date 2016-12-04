@@ -113,8 +113,7 @@
             64 - Volume rocker
          For example, a device with Home, Back and Menu keys would set this
          config to 7. -->
-    <integer name="config_deviceHardwareWakeKeys">64</integer>
-
+   
     <!-- Control the behavior when the user long presses the home button.
             0 - Nothing
             1 - Menu key
@@ -137,8 +136,7 @@
          This needs to match the constants in
          policy/src/com/android/internal/policy/impl/PhoneWindowManager.java
     -->
-    <integer name="config_longPressOnMenuBehavior">2</integer>
-
+   
     <!-- Control the behavior when the user double-taps the home button.
             0 - Nothing
             1 - Menu
@@ -179,9 +177,11 @@
 
     <!-- The list absolute paths of jar/apk files containing the device specific handlers,
          delimited by File.pathSeparator, which defaults to ":" on Android -->
-    <string name="config_deviceKeyHandlerLib" translatable="false">/system/framework/com.cyanogenmod.keyhandler.jar</string>
-
+   
     <!-- Full qualified name of the class that implements
          com.android.internal.os.DeviceKeyHandler interface. -->
-    <string name="config_deviceKeyHandlerClass" translatable="false">com.cyanogenmod.settings.device.KeyHandler</string>
+
+    <!-- Enable doze powersaving -->
+    <bool name="config_enableAutoPowerModes">true</bool>
+
 </resources>
